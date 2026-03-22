@@ -1,2 +1,16 @@
-# power_banker
-A demo Flutter app that looks and behaves like a small banking product: balance, transactions, spending analytics, mock transfer, profile — with no real backend. You chose BLoC for UI state and HTTP + interceptors so the stack mirrors production (request pipeline, status codes, JSON) while staying fully offline.
+# powerbanker
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
