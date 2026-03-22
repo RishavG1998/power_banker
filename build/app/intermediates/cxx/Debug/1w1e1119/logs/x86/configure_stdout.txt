@@ -1,0 +1,10 @@
+Not searching for unused variables given on the command line.
+-- The C compiler identification is Clang 17.0.2
+-- The CXX compiler identification is Clang 17.0.2
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /Users/rishavgupta/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang
+-- Check for working C compiler: /Users/rishavgupta/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang - broken
+-- Configuring incomplete, errors occurred!
+See also "/Users/rishavgupta/Downloads/My Files/My Projects/power_banker/android/app/.cxx/Debug/1w1e1119/x86/CMakeFiles/CMakeOutput.log".
+See also "/Users/rishavgupta/Downloads/My Files/My Projects/power_banker/android/app/.cxx/Debug/1w1e1119/x86/CMakeFiles/CMakeError.log".

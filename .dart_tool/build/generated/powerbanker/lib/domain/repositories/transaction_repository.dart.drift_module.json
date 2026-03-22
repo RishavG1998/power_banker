@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:powerbanker/domain/entities/category.dart",
+    "package:powerbanker/domain/entities/transaction.dart"
+  ]
+}

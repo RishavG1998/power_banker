@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:powerbanker/domain/entities/dashboard_summary.dart"
+  ]
+}

@@ -1,0 +1,32 @@
+CMake Error at /Users/rishavgupta/Library/Android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/Users/rishavgupta/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /Users/rishavgupta/Downloads/My Files/My Projects/power_banker/android/app/.cxx/Debug/1w1e1119/x86/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/Users/rishavgupta/Library/Android/sdk/cmake/3.22.1/bin/ninja cmTC_5be6b && [1/2] Building C object CMakeFiles/cmTC_5be6b.dir/testCCompiler.c.o
+    [2/2] Linking C executable cmTC_5be6b
+    FAILED: cmTC_5be6b 
+    : && /Users/rishavgupta/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_5be6b.dir/testCCompiler.c.o -o cmTC_5be6b  -latomic -lm && :
+    ld64.lld: error: unknown argument '--build-id=sha1'
+    ld64.lld: error: unknown argument '--no-rosegment'
+    ld64.lld: error: unknown argument '--no-undefined-version'
+    ld64.lld: error: unknown argument '--fatal-warnings'
+    ld64.lld: error: unknown argument '--no-undefined'
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt
+
+

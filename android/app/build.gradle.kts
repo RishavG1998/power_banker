@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.example.powerbanker"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Match plugins (path_provider_android, sqlite3_flutter_libs) that declare NDK 27.
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

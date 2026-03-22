@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:powerbanker/domain/entities/category.dart","transitive":false},{"uri":"package:powerbanker/domain/entities/transaction.dart","transitive":false}],"elements":[]}
