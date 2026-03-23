@@ -13,12 +13,13 @@ class DashboardRepositoryImpl implements DashboardRepository {
     required DateTime to,
   }) {
     return _db.select(_db.transactions).watch().map((rows) {
-      final filtered = rows.where((r) {
-        final d = r.occurredAt;
-        return !d.isBefore(from) && !d.isAfter(to);
-      }).toList();
+      final filtered =
+          rows.where((r) {
+            final d = r.occurredAt;
+            return !d.isBefore(from) && !d.isAfter(to);
+          }).toList();
 
-      var currency = 'USD';
+      var currency = 'INR';
       var income = 0;
       var expenseAbs = 0;
       final byCategory = <int, int>{};

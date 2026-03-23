@@ -48,10 +48,17 @@ class _TransactionTile extends StatelessWidget {
   final domain.Transaction transaction;
   final VoidCallback onDelete;
 
+  String _formatDate(DateTime date) {
+    final d = date.toLocal();
+    final mm = d.month.toString().padLeft(2, '0');
+    final dd = d.day.toString().padLeft(2, '0');
+    return '${d.year}-$mm-$dd';
+  }
+
   @override
   Widget build(BuildContext context) {
     final amount = transaction.amount.minorUnits;
-    final subtitle = '${transaction.occurredAt.toLocal()}'.split('.').first;
+    final subtitle = _formatDate(transaction.occurredAt);
     return Dismissible(
       key: ValueKey(transaction.id),
       direction: DismissDirection.endToStart,

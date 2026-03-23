@@ -18,7 +18,7 @@ void main() {
       await repo.addTransaction(
         title: 'Coffee',
         amountMinorUnits: -350,
-        currencyCode: 'USD',
+        currencyCode: 'INR',
         occurredAt: DateTime(2025, 1, 15),
         categoryId: (await repo.watchCategories().first).first.id,
       );

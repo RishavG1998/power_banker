@@ -111,7 +111,7 @@ class AddTransactionCubit extends Cubit<AddTransactionState> {
       await _repo.addTransaction(
         title: title,
         amountMinorUnits: signed,
-        currencyCode: 'USD',
+        currencyCode: 'INR',
         occurredAt: state.date ?? DateTime.now(),
         categoryId: state.categoryId,
       );

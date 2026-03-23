@@ -20,6 +20,14 @@ class AddTransactionPage extends StatelessWidget {
 class _AddTransactionView extends StatelessWidget {
   const _AddTransactionView();
 
+  String _formatDate(DateTime? date) {
+    if (date == null) return '';
+    final d = date.toLocal();
+    final mm = d.month.toString().padLeft(2, '0');
+    final dd = d.day.toString().padLeft(2, '0');
+    return '${d.year}-$mm-$dd';
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AddTransactionCubit, AddTransactionState>(
@@ -60,7 +68,7 @@ class _AddTransactionView extends StatelessWidget {
               ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: const Text('Date'),
-                subtitle: Text(state.date?.toLocal().toString().split('.').first ?? ''),
+                subtitle: Text(_formatDate(state.date)),
                 trailing: IconButton(
                   icon: const Icon(Icons.calendar_today),
                   onPressed: () async {
@@ -71,7 +79,20 @@ class _AddTransactionView extends StatelessWidget {
                       firstDate: DateTime(2000),
                       lastDate: DateTime(2100),
                     );
-                    if (picked != null) cubit.setDate(picked);
+                    if (picked != null) {
+                      // `showDatePicker` returns the selected day at midnight; keep the existing time-of-day
+                      // so transaction ordering remains stable (even though we only display the date).
+                      cubit.setDate(DateTime(
+                        picked.year,
+                        picked.month,
+                        picked.day,
+                        now.hour,
+                        now.minute,
+                        now.second,
+                        now.millisecond,
+                        now.microsecond,
+                      ));
+                    }
                   },
                 ),
               ),
